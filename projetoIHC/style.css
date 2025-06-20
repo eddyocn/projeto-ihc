@@ -1,0 +1,288 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f3f7fc;
+  color: #333;
+  line-height: 1.5;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.site-header {
+  background-color: #00529b;
+  padding: 1rem 0;
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  display: block;
+  height: 50px;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  text-decoration: underline;
+}
+
+.login-section,
+.cadastro-section,
+.agendamento-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.login-section,
+.cadastro-section {
+  min-height: calc(100vh - 72px);
+}
+
+.agendamento-section {
+  align-items: flex-start;
+}
+
+.login-card,
+.cadastro-card,
+.agendamento-card {
+  background-color: #fff;
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.login-card {
+  max-width: 400px;
+}
+
+.cadastro-card {
+  max-width: 600px;
+}
+
+.agendamento-card {
+  max-width: 800px;
+}
+
+/*titulo*/
+.login-card h1,
+.cadastro-card h1,
+.agendamento-card h1 {
+  text-align: center;
+  color: #00529b;
+  margin-bottom: 1.5rem;
+}
+
+/*formulario*/
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/*telas*/
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.link-small {
+  color: #00529b;
+  text-decoration: none;
+}
+
+.link-small:hover {
+  text-decoration: underline;
+}
+
+/*botões*/
+.btn-primary,
+.btn-secondary,
+button[type='submit'] {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary {
+  background-color: #00529b;
+  color: #fff;
+  padding: 0.8rem 1rem;
+}
+
+.btn-primary:hover {
+  background-color: #003f7d;
+}
+
+.btn-secondary {
+  background-color: #ccc;
+  color: #333;
+  padding: 0.8rem 1.2rem;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background-color: #b3b3b3;
+}
+
+.register-prompt {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.register-prompt a {
+  color: #00529b;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.register-prompt a:hover {
+  text-decoration: underline;
+}
+
+/*agendamento*/
+.schedule-table {
+  overflow-x: auto;
+  margin-top: 1.5rem;
+}
+
+.schedule-table table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.schedule-table caption {
+  caption-side: top;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #00529b;
+}
+
+.schedule-table th,
+.schedule-table td {
+  border: 1px solid #ccc;
+  padding: 0.6rem;
+}
+
+.schedule-table thead th {
+  background-color: #00529b;
+  color: #fff;
+}
+
+.schedule-table tbody tr:nth-child(odd) {
+  background-color: #f9fafb;
+}
+
+/*finalização*/
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.center-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 2rem auto 0;
+  width: fit-content;
+}
+
+.btn-acessar {
+  text-decoration: none;
+}
+
+/*acessibilidade*/
+.acessibilidade-flutuante {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 999;
+}
+
+.acessibilidade-flutuante img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+/*idioma*/
+
+.idioma-topo {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+}
+
+.idioma-topo img {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}

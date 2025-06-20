@@ -1,0 +1,210 @@
+<!-- agendamento.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hospital Vida e Saúde – Agendamento</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-pIVKUwh5+6e5hONgGu1wqYQj5cuvUZVYj+3XZp+F3L+PbY6xFNCBQgEpjdUaS4wworn2xh+ZkJ1HZ+f5+tZ6Xg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- CSS único -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="login.html" class="logo">
+        <img src="Logo.png" alt="Hospital Vida e Saúde" />
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="login.html">Acessar</a></li>
+          <li><a href="cadastro.html">Cadastrar</a></li>
+          <li><a href="agendamento.html" class="active">Agendamento</a></li>
+          <li><a href="login.html">Sair</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="idioma-topo">
+      <a href="#" title="Selecionar idioma">
+        <img src="brasil.png" alt="Selecionar idioma" />
+      </a>
+    </div>
+    <div class="acessibilidade-flutuante">
+      <a href="#" title="libras">
+        <img src="libras.png" alt="libras" />
+      </a>
+      <a href="#" title="voz">
+        <img src="voz.jpg" alt="voz" />
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="agendamento-section">
+      <div class="agendamento-card">
+        <h1>Agendamento de Consultas</h1>
+
+        <form action="confirmacao-agendamento.html" method="post">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="plano">Plano de Saúde</label>
+              <select id="plano" name="plano">
+                <option value="" disabled selected>Selecione</option>
+                <option value="unimed">Plano 1</option>
+                <option value="bradesco">Plano 2</option>
+                <option value="amil">Plano 3</option>
+                <option value="particular">Outro Plano</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="especialidade">Especialidade</label>
+              <select id="especialidade" name="especialidade" required>
+                <option value="" disabled selected>Selecione</option>
+                <option value="cardiologia">Cardiologia</option>
+                <option value="dermatologia">Dermatologia</option>
+                <option value="ortopedia">Ortopedia</option>
+                <option value="pediatria">Pediatria</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="medico">Médico</label>
+              <select id="medico" name="medico" required>
+                <option value="" disabled selected>Selecione</option>
+                <option value="dr-oliveira">Dr. Oliveira</option>
+                <option value="dra-souza">Dra. Souza</option>
+                <option value="dr-costa">Dr. Costa</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="data">Data</label>
+              <input type="date" id="data" name="data" required />
+            </div>
+            <div class="form-group">
+              <label for="horario">Horário</label>
+              <select id="horario" name="horario" required>
+                <option value="" disabled selected>Selecione</option>
+                <option value="09:00">09:00</option>
+                <option value="10:00">10:00</option>
+                <option value="11:00">11:00</option>
+                <option value="14:00">14:00</option>
+                <option value="15:00">15:00</option>
+                <option value="16:00">16:00</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="btn-primary">
+            <i class="fa fa-search"></i> Buscar Horários
+          </button>
+        </form>
+
+        <div class="schedule-table">
+          <table>
+            <caption>Agendamento</caption>
+            <thead>
+              <tr>
+                <th>Horário</th>
+                <th>Seg</th>
+                <th>Ter</th>
+                <th>Qua</th>
+                <th>Qui</th>
+                <th>Sex</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>09:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>10:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>11:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>12:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>13:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>14:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>15:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>16:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>17:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="form-actions">
+          <a href="login.html" class="btn-secondary">Voltar</a>
+          <button type="button" class="btn-primary">
+            <i class="fa fa-calendar-check"></i> Confirmar Agendamento
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+</body>
+
+</html>
